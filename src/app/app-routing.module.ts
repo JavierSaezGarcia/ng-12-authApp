@@ -4,7 +4,8 @@
 
 
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanLoad } from '@angular/router';
+import { ValidarTokenGuard } from './guards/validar-token.guard';
 
 // en este caso tendremos dos padres => auth y protected y sus respectivos hijos
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'dashboard', 
-    loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule )    
+    loadChildren: () => import('./protected/protected.module').then( m => m.ProtectedModule ),
+    canActivate: [ ValidarTokenGuard],
+    canLoad: [ ValidarTokenGuard]   
   },
   {
     path: '**', 
