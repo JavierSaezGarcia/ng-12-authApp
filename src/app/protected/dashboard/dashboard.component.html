@@ -4,6 +4,6 @@
 <h4>
     User info
 </h4>
-<pre> ... </pre>
-<button type="submit" (click)="logout()" style="background-color: blue; color:white; padding:10px;">Logout</button>
+<pre>{{ usuario | json }} </pre>
+<button (click)="logout()" style="background-color: blue; color:white; padding:10px;">Logout</button>
 

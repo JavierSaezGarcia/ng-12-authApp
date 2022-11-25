@@ -1,7 +1,7 @@
 <!-- Implementar formGroup a miFormulario y la funcion login con submit -->
 <form class="login100-form" 
       autocomplete="off"
-      [formGroup]="myForm"
+      [formGroup]="miFormulario"
       (ngSubmit)="login()">
 
     <span class="login100-form-title p-b-49">
@@ -32,7 +32,7 @@
         <div class="wrap-login100-form-btn">
             <div class="login100-form-bgbtn"></div>
             <!-- Poner el boton tipo submit y la funcion disabled si no es valido -->
-            <button class="login100-form-btn" type="submit" [disabled]="myForm.invalid">
+            <button type="submit" class="login100-form-btn" [disabled]="miFormulario.invalid">
                 Login
             </button>
         </div>

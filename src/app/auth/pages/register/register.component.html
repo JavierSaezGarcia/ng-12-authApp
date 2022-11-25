@@ -1,6 +1,6 @@
 <form class="login100-form" 
         autocomplete="off"
-        [formGroup]="myForm"
+        [formGroup]="miFormulario"
         (ngSubmit)="register()">
                 
     <span class="login100-form-title p-b-49">
@@ -39,7 +39,7 @@
     <div class="container-login100-form-btn">
         <div class="wrap-login100-form-btn">
             <div class="login100-form-bgbtn"></div>
-            <button class="login100-form-btn" type="submit" [disabled]="myForm.invalid">
+            <button class="login100-form-btn" type="submit" [disabled]="miFormulario.invalid">
                 Registrar
             </button>
         </div>
