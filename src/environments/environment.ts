@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://ng-node-auth.herokuapp.com/api'
+  baseUrl: 'http://localhost:4000/api'
 };
 
 /*
